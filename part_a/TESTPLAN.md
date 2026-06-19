@@ -133,6 +133,7 @@ Fields: **ID and Title**, **Spec Ref**, **Priority**, **Risk Rationale**, **Step
 - **Risk Rationale:** Showing the user incorrect payout, odds, or match info in the receipt undermines trust and may violate regulatory requirements for transparent bet confirmation.
 - **Steps:** 1. Reset balance. 2. Note a match's teams, odds for the chosen selection. 3. Select odds, enter a known stake, place the bet. 4. Read the confirmation pop-up's match name, selection, stake, odds, and payout. 5. Cross-check payout against API response and against the formula: payout = stake × odds.
 - **Expected Result:** All fields in the receipt match the pre-submission bet slip values and the API response. Payout equals stake × odds (not doubled, not truncated).
+- **Automation Status:** Automated (`tests/webui/test_success_receipt.py`). Stake and odds assertions pass. Payout assertion `xfail` (BUG-05: payout doubles stake instead of stake × odds). Match name assertion `xfail` (BUG-10: home/away order swapped).
 
 #### TC-10: Bet slip displays correct potential payout before placement
 - **Spec Ref:** 2.2 / 3
