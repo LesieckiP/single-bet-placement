@@ -82,9 +82,25 @@ class Test<DescriptiveName>:
     @pytest.mark.tc("TC-XX")
     def test_<descriptive_name>(self):
         """TC-XX: <One-line description matching the test plan>"""
-        # Test implementation
+        # Test implementation — all UI interactions and assertions go here
         ...
 ```
+
+### Fixture vs test method responsibility
+
+**Fixtures handle preconditions and cleanup only:**
+- Initialize page objects and API clients
+- Reset balance / application state to a known starting point
+- Fetch API ground-truth data (matches, balance) needed for later verification
+- Refresh the page to ensure clean UI state
+- Teardown: restore state after the test class finishes
+
+**Test methods contain all test logic:**
+- UI interactions (clicking, typing, navigating)
+- Reading values from the page
+- Assertions
+
+Never place UI interactions (clicking odds, entering stakes, placing bets, reading modals) inside a fixture. If multiple test methods within one class need the result of the same UI action, either consolidate into a single test method with multiple assertions, or use a helper method on the class that caches its result on first call.
 
 ### Conventions
 
