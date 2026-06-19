@@ -93,7 +93,18 @@ class Test<DescriptiveName>:
 - Descriptive assertion messages explaining what went wrong
 - Use `pytest.approx()` for floating-point comparisons (monetary values)
 - Use API (`BetEndpoint`) for ground-truth verification of balances and bet state
-- Use `time.sleep()` sparingly and only when waiting for async server processing in timing-sensitive tests
+
+### Waiting strategy — no `time.sleep()`
+
+**Never use `time.sleep()` in tests or fixtures.** It is a flaky, slow anti-pattern. Instead, rely on explicit waits already built into the page object framework:
+
+- `BasePage.find_element(locator)` waits for presence via `WebDriverWait` + `expected_conditions.presence_of_element_located`
+- `BasePage.click(locator)` waits for clickability via `expected_conditions.element_to_be_clickable`
+- `BasePage.is_visible(locator)` waits for visibility via `expected_conditions.visibility_of_element_located`
+
+These methods already poll with a configurable timeout (default 10s), so calling the next page object method after a UI action is sufficient — the method itself will wait for its target element to be ready.
+
+If a test needs to wait for a **new condition** not yet covered by `BasePage` (e.g. element to disappear, text to change, staleness), add a new reusable method to `BasePage` using `WebDriverWait` + the appropriate `expected_conditions` — do not inline a `time.sleep()` workaround in the test.
 
 ## Step 4: Validate
 
