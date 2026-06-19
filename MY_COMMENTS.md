@@ -13,6 +13,32 @@ What i want to add:
 3. Re-Used project from step #1 it to prepare bug report file based on the list of issues i found during my exploratory testing session. For full transparency i pasted the prompt into the [BUGREPORT_PROMPT.md](./part_a/BUGREPORT_PROMPT.md). 
     Afterwards i have carefully reviewed the result, fixed steps, expected and actual values against the requirements and re-prioritised the issues slightly (as this part actually were done pretty decent). This gave me confidence all my issues were **correctly** addressed. During review i have added attachments to the bugs. Why AI here? - It saved me a lot of time of typing the same strings especially when the fields were already defined in the task. I wanted to use it just to prepare me a basic structure while giving future reviewers (you) visibility if i understood the requirements while finding issues.
 
+# In Test Automation:
+1. Used for help with handling the proper error handling in requests (for example 401 and 405 response difference, the implementation is done in base_endpoint.py file )
+2. Expanding the patterns introduced - after setting up models for responses i asked it to create next models for me, example prompt:
+```
+Create pydantic model for the bet_models.py file similar to other models already created, you can see matches_models.py as reference. Below im providing you with the schema:
+PlaceBetResponse{
+message	string
+example: Bet placed successfully
+matchId	string
+example: premier-league-manutd-chelsea
+selection	string
+example: HOME
+stake	number
+example: 10
+odds	number
+example: 2.45
+payout	number
+example: 24.5
+balance	number
+example: 115.5
+currency	string
+example: EUR
+}
+```
+3. Write some regexps in pageObjects
+
 ### Model used: Sonnet 4.6 (medium effort)
 
 ## How i was not using AI in the task:

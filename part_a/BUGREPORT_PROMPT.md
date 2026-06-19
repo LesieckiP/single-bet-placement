@@ -58,6 +58,7 @@ From requirements:
 20. Inconsistency in GET https://qae-assignment-tau.vercel.app/api/place-bet is not guarded but GET /api/reset-balance returns error: "method_not_allowed" 
 21. User can click multiple times into "Place bet" on UI and this results in placing a lot of bets. During first click a button grayed-out and changed into loading state but still user can spam-click on it. A lot of pop-ups stack then.
 22. The error "Something is wrong" is shown for only short period of time while doing steps from #1 and disappear quickly
+23. Reset balance set the different value than get_balance
 To discuss: API match - id is string and i see posibility to not be unique: "id": "premier-league-manutd-chelsea" but later reponses for matches include the date ex. ligue-1-psg-lyon-2026-04-12 - this requires discussion with team and maybe API documentation update.
 Improvement: Add to schema for odds ex. /api/matches (currently numbers) that only positive can be there ("exclusiveminimum": 0) and for OAS3.0 it's a boolean used alongside minimum ("minimum": 0, "exclusiveMinimum": true)
 Improvement: "All" button in calendar picker (filtering) is presenting also the calendar in the same time which is misleading - maybe it should hide while selecting this option

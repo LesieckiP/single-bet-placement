@@ -238,6 +238,21 @@ Note from debugging: this is handled directly within js code rules.
 
 **Evidence:** ![Screenshot A](./bugreport_images/match_list.png)
 
+### BUG-10 — Reset balance set the different value than get_balance
+**Severity:** Low
+
+**Reproduction Steps:**
+1. Execute /api/reset-balance endpoint 
+2. Check the response
+3. Execute /api/get-balance endpoint
+
+**Expected vs Actual:**
+- Actual: reset balance returns 125.50 but get_balance shows 120.
+- Expected: reset-balance and get-balance should have the same value.
+
+**Business Impact:** reset-balance is for testing purposes so it might be just development error
+
+
 ---
 
 ### BUG-14 — Odds filter allows max value lower than min value
