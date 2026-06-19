@@ -1,4 +1,3 @@
-import os
 from jproperties import Properties
 
 

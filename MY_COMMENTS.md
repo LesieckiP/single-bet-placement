@@ -37,7 +37,9 @@ currency	string
 example: EUR
 }
 ```
-3. Write some regexps in pageObjects
+3. Write regexp in pageObject
+4. Asked to create second scenario for me in test_bet_placement based on the first one i created.
+5. Kindly asked for providing installation instruction in README.md
 
 ### Model used: Sonnet 4.6 (medium effort)
 

@@ -1,5 +1,7 @@
-from pydantic import BaseModel
 from datetime import date
+
+from pydantic import BaseModel
+
 
 class Odds(BaseModel):
     home: float
@@ -10,6 +12,7 @@ class MatchResponse(BaseModel):
     id: str
     competition: str
     kickoffDate: date
+    homeTeam: str
     awayTeam: str
     odds: Odds
 

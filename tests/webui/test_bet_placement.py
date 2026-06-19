@@ -1,11 +1,10 @@
-import logging
-
 import pytest
 
 from endpoints.bet_endpoint import BetEndpoint
 from endpoints.models.bet_models import PlaceBetRequest, Selection
 from pages.bet_slip import BetSlipPage
 from pages.main_page import MainPage
+
 
 @pytest.fixture(autouse=True, scope="class")
 def setup_and_teardown(request, web_app, api_session):
