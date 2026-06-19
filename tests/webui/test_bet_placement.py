@@ -24,7 +24,7 @@ def setup_and_teardown(request, web_app, api_session):
 
     yield
 
-    # bet_endpoint.reset_balance()
+    bet_endpoint.reset_balance()
 
 class TestBetPlacement:
     main_page: MainPage

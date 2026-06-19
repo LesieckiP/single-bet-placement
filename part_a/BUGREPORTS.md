@@ -22,7 +22,7 @@
 
 **Business Impact:** Direct exploit path to corrupt balances/ledgers or manipulate payout records; in a real-money betting product this is a financial integrity and potential fraud vulnerability.
 
-**Evidence:** ![alt text](./resources/bugreport_images/minus_stake.png)
+**Evidence:** ![alt text](./bugreport_images/minus_stake.png)
 
 ---
 
@@ -238,7 +238,7 @@ Note from debugging: this is handled directly within js code rules.
 
 **Evidence:** ![Screenshot A](./bugreport_images/match_list.png)
 
-### BUG-10 — Reset balance set the different value than get_balance
+### BUG-14 — Reset balance set the different value than get_balance
 **Severity:** Low
 
 **Reproduction Steps:**
@@ -255,7 +255,7 @@ Note from debugging: this is handled directly within js code rules.
 
 ---
 
-### BUG-14 — Odds filter allows max value lower than min value
+### BUG-15 — Odds filter allows max value lower than min value
 **Severity:** Low
 
 **Reproduction Steps:**
@@ -274,7 +274,7 @@ Note from debugging: this is handled directly within js code rules.
 
 ---
 
-### BUG-15 — Match counter ("Showing 103 matches") does not update after filtering
+### BUG-16 — Match counter ("Showing 103 matches") does not update after filtering
 **Severity:** Low
 
 **Reproduction Steps:**
@@ -292,7 +292,7 @@ Note from debugging: this is handled directly within js code rules.
 
 ---
 
-### BUG-16 — Error pop-up disappears too quickly to allow the user to act on it
+### BUG-17 — Error pop-up disappears too quickly to allow the user to act on it
 **Severity:** Medium
 
 **Reproduction Steps:**
@@ -310,7 +310,7 @@ Note from debugging: this is handled directly within js code rules.
 
 ---
 
-### BUG-17 — No available balance shown in the Bet Slip once a selection is made (Requirement 2.2)
+### BUG-18 — No available balance shown in the Bet Slip once a selection is made (Requirement 2.2)
 **Severity:** Medium
 
 **Reproduction Steps:**
@@ -327,7 +327,7 @@ Note from debugging: this is handled directly within js code rules.
 **Evidence:** Screenshot B (Bet Slip header shows "Remove All" instead of balance)
 
 
-### BUG-18 — Odds range filter is exclusive instead of inclusive at the minimum boundary (violates requirement 2.9)
+### BUG-19 — Odds range filter is exclusive instead of inclusive at the minimum boundary (violates requirement 2.9)
 **Severity:** Low
 
 **Reproduction Steps:**
@@ -344,7 +344,7 @@ Note from debugging: this is handled directly within js code rules.
 
 ---
 
-### BUG-19 — Date picker shows a red "error" highlight when only a Start Date is selected, despite working correctly
+### BUG-20 — Date picker shows a red "error" highlight when only a Start Date is selected, despite working correctly
 **Severity:** Low
 
 **Reproduction Steps:**

@@ -47,3 +47,9 @@ example: EUR
 
 ## Why i selected this particular Test Cases in the Test Plan:
 Focused on critical functionality (money leaks prevention) and posibility to make the actuall bet (money earnings), treated UI issues with lower priority, examples (if proper fields are displayed). If there is workaround possible like page refresh the priority was also lowered by me.
+
+## Why i selected those two test cases in api and webui as the ones to automate
+Those test cases are currently the ones that are have bug raised against, first of all the approach taken is TDD so when this get fixed the test should be ran and pass. Secondly i priotized them against others because they are providing a great risk for the company (can result in real financial loses to a company) as people can exploit this on their favor. This touches the main functionality of the app.
+
+## Recommendation
+My recommendation is to at least fix all the critical issues as they are providing great risks and are feature-blockers. It would be good to cover also High priority issues or some of them after discussing with stakeholders the deadline for the release and posible risks of releasing app.
