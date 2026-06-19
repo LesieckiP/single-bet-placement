@@ -1,9 +1,5 @@
-What i want to add:
-- schema validation for rest (pydantic)
-- test case for past game
-- test case for simultaneous api request for bet
-
-
+# Comment
+During this task i was allowed to use AI and we know that it could be used to generate the project and resolve a task. I was a little bit torn between using and not using it since in modern times not using the AI can be an disadvantage, but on other side too extensive usage could lead you to struggle with understanding of what my skills are and if i'm a good fit for the role. Thats why while trying to be fully transparent transparent im describing my approach and where i used the AI and where not and done it consciously to make it easier for the reviewer understand my approach. So starting with - this file is fully done by myself ;)
 ## When and why i used AI within this task
 1. Test Plan generation
     Created workspace within Claude Cowork with instructions for the agent that clarified it's role for the project. File with specification was uploaded. this allows me to use it in future in case i will have to keep the same rules and behavior for same topic.
