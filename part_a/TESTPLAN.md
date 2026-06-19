@@ -74,6 +74,7 @@ Fields: **ID and Title**, **Spec Ref**, **Priority**, **Risk Rationale**, **Step
 - **Risk Rationale:** The single highest-impact money-leak scenario — a race condition on submit could duplicate a real-money bet from one user action.
 - **Steps:** 1. Fire two near-simultaneous `place-bet` requests for the same user/selection/stake. 2. Also test rapid double-click in the UI.
 - **Expected Result:** Exactly one bet is created and one stake deducted; the second request returns 409.
+- **Automation Status:** Automated — WebUI rapid double-click (`tests/webui/test_double_submit.py`). Marked `xfail`: test confirms a race condition where double-click inconsistently creates two bets instead of one.
 
 #### TC-02: Successful placement deducts stake exactly once
 - **Spec Ref:** 2.3 / 2.4
