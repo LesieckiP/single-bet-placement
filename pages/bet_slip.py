@@ -19,3 +19,6 @@ class BetSlipPage(BasePage):
     
     def get_place_bet_button(self):
         return self.find_element(self.PLACE_BET_BUTTON)
+
+    def double_click_place_bet(self):
+        self.double_click(self.PLACE_BET_BUTTON)
